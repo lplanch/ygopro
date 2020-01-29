@@ -68,14 +68,14 @@ bool Game::Initialize() {
 		ErrorLog("Failed to load strings!");
 		return false;
 	}
-	dataManager.LoadStrings("./expansions/strings.conf");
+	//dataManager.LoadStrings("./expansions/strings.conf");
 	env = device->getGUIEnvironment();
 	numFont = irr::gui::CGUITTFont::createTTFont(env, gameConf.numfont, 16);
 	adFont = irr::gui::CGUITTFont::createTTFont(env, gameConf.numfont, 12);
 	lpcFont = irr::gui::CGUITTFont::createTTFont(env, gameConf.numfont, 48);
 	guiFont = irr::gui::CGUITTFont::createTTFont(env, gameConf.textfont, gameConf.textfontsize);
 	textFont = irr::gui::CGUITTFont::createTTFont(env, gameConf.textfont, gameConf.textfontsize);
-	if(!numFont || !textFont) {
+	if (!numFont || !textFont) {
 		ErrorLog("Failed to load font(s)!");
 		return false;
 	}
